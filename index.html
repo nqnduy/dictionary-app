@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Grunt Template</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="title" content="Milano" />
+    <meta name="description" content="" />
+    <!-- meta facebook -->
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Grunt Template" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="Grunt Template" />
+    <meta property="og:image" content="" />
+
+    <link rel="stylesheet" href="dest/style.min.css">
+    <link rel="stylesheet" href="dest/fonts.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" >
+
+    <style>
+        @font-face {
+            font-family: 'sbold';
+            src: url('Poppins-SemiBold.woff2') format('woff2'),
+                url('Poppins-SemiBold.woff') format('woff');
+            font-weight: 600;
+            font-style: normal;
+            font-display: fallback;
+        }
+
+        @font-face {
+            font-family: 'regular';
+            src: url('./fonts/Poppins-Regular.woff2') format('woff2'),
+                url('./fonts/Poppins-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: fallback;
+        }
+
+        @font-face {
+            font-family: 'medium';
+            src: url('./fonts/Poppins-Medium.woff2') format('woff2'),
+                url('./fonts/Poppins-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: fallback;
+        }
+
+        @font-face {
+            font-family: 'bold';
+            src: url('./fonts/Poppins-Bold.woff2') format('woff2'),
+                url('./fonts/Poppins-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: fallback;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="homepage">
+        <header class="header">
+            English Dictionary
+        </header>
+        <main class="mainwrapper">
+            <div class="search">
+                <input type="text" placeholder="Search a word">
+                <i class="fas fa-search"></i>
+                <span class="material-icons">close</span>
+            </div>
+            <ul>
+                <li class="word">
+                    <div class="word-details">
+                        <p>happy</p>
+                        <span>adjective /'hapi/</span>
+                    </div>
+                    <i class="fas fa-volume-up"></i>
+                </li>
+                <li class="content">
+                    <div class="meaning">
+                        <div class="meaning-details">
+                            <p>Meaning</p>
+                            <span>feeling or showing pleasure or contentment</span>
+                        </div>
+                    </div>
+                    <div class="example">
+                        <div class="example-details">
+                            <p>Example</p>
+                            <span>Prakash came in looking happy and excited</span>
+                        </div>
+                    </div>
+                    <div class="synonyms">
+                        <div class="synonyms-details">
+                            <p>Synonyms</p>
+                            <div class="synonyms-details__list">
+                                <span>glad,</span>
+                                <span>contented,</span>
+                                <span>delighted,</span>
+                                <span>cheerful</span>
+                                <span>joyful</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </main>
+    </div>
+
+
+    <!-- Global JS -->
+    <script type="text/javascript" src="dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="dest/main.js"></script>
+
+</body>
+
+</html>
