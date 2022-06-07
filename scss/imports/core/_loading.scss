@@ -1,0 +1,21 @@
+.loading {
+    @include size(100%);
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: $white100-cl;
+    z-index: 900;
+    opacity: 1;
+    pointer-events: auto;
+    @include transition(0.1s);
+    &.--show {
+        opacity: 1 !important;
+        pointer-events: none;
+        @include transition(0s);
+    }
+    &.--hide {
+        opacity: 0;
+        pointer-events: none;
+        @include transition(0.1s);
+    }
+}

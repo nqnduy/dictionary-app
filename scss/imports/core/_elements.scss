@@ -1,0 +1,127 @@
+// css button, title, icon, elements...
+img {
+    max-width: 100%;
+    height: auto;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    display: block;
+    outline: 0;
+    &.--center {
+        margin: 0 auto;
+        display: block;
+    }
+}
+a {
+    text-decoration: none;
+    outline: 0;
+    // color: $black30-cl;
+    &.link {
+        color: $main-cl;
+        @include transition($t);
+        &:hover {
+            // opacity: 0.6;
+        }
+    }
+}
+strong {
+    font-family: gb;
+}
+
+sup {
+    vertical-align: super;
+    font-size: var(--body14-fs);
+    line-height: var(--body14-lh);
+}
+sub {
+    vertical-align: sub;
+    font-size: var(--body14-fs);
+    line-height: var(--body14-lh);
+}
+
+//================================== COLOR ===========================//
+.--white-cl {
+    color: $white100-cl;
+}
+.--main-cl {
+    color: $main-cl;
+}
+
+//================================== HEADING ===========================//
+.heading {
+    display: block;
+    // font-family: ob;
+    text-transform: uppercase;
+    text-align: center;
+    &.--h0 {
+        font-size: var(--h0-fs);
+        line-height: var(--h0-lh);
+    }
+    &.--h1 {
+        font-size: var(--h1-fs);
+        line-height: var(--h1-lh);
+    }
+    &.--h2 {
+        font-size: var(--h2-fs);
+        line-height: var(--h2-lh);
+    }
+    &.--h3 {
+        font-size: var(--h3-fs);
+        line-height: var(--h3-lh);
+    }
+    &.--h4 {
+        font-size: var(--h4-fs);
+        line-height: var(--h4-lh);
+    }
+    &.--h5 {
+        font-size: var(--h5-fs);
+        line-height: var(--h5-lh);
+    }
+}
+
+/////////////////////////// BUTTON //////////////////////////
+
+.btnmain {
+    width: max-content;
+    height: 45px;
+    font-size: var(--body14-fs);
+    line-height: var(--body14-lh);
+    // font-family: gb;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    cursor: pointer;
+    &:after {
+        content: "";
+        width: 75px;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: $main-cl;
+        border-radius: 22px;
+        z-index: -1;
+        @include transition($t $cubic);
+    }
+    &:hover {
+        &:after {
+            width: 100%;
+        }
+    }
+    &.--white {
+        &:after {
+            background: $white100-cl;
+        }
+    }
+    &.--center {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
