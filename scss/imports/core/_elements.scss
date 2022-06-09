@@ -19,7 +19,7 @@ a {
     outline: 0;
     // color: $black30-cl;
     &.link {
-        color: $main-cl;
+        color: $primary-cl;
         @include transition($t);
         &:hover {
             // opacity: 0.6;
@@ -46,7 +46,7 @@ sub {
     color: $white100-cl;
 }
 .--main-cl {
-    color: $main-cl;
+    color: $primary-cl;
 }
 
 //================================== HEADING ===========================//
@@ -104,7 +104,7 @@ sub {
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: $main-cl;
+        background-color: $primary-cl;
         border-radius: 22px;
         z-index: -1;
         @include transition($t $cubic);

@@ -50,7 +50,7 @@
         font-family: gb;
     }
     a {
-        color: $main-cl;
+        color: $primary-cl;
         @include transition($t);
         &:hover {
             opacity: 0.6;

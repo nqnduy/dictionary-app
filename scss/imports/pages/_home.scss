@@ -3,36 +3,181 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 1.4rem;
+    line-height: normal;
     min-height: 100vh;
     background-image: url("../../../img/wickedbackground.png");
 }
 .homepage {
-    width: 420px;
+    width: 42rem;
     height: fit-content;
 
-    padding: 28px 28px 45px;
+    padding: 2.8rem 2.8rem 4.5rem;
     background-color: #fff;
-    border-radius: 7px;
+    border-radius: 0.7rem;
     header {
         font-family: "medium";
         font-size: 2.8rem;
 
         text-align: center;
     }
-    main {
-        overflow-y: hidden;
+    .main{
+        overflow-x: visible;
         .search {
-            margin: 35px 0 18px;
+            position: relative;
+            margin: 3.5rem 0 1.8rem;
             input {
+                font-family: 'regular';
+                font-size: 1.6rem;
+
                 width: 100%;
-                height: 53px;
+                height: 5.3rem;
 
                 outline: none;
                 border: 1px solid #999;
-                border-radius: 5px;
+                padding: 0 4.2rem;
+                border-radius: 0.5rem;
+                transition: 0.2s all ease;
+                &:focus{
+                    padding: 0 4.1rem;
+                    border: 2px solid $primary-cl;
+                    transition: 0.2s all ease;
+                    ~ i {
+                        transition: 0.2s all ease;
+                        color: $primary-cl;
+                    }
+                }
+                &:valid ~ span {
+                    display: block;
+                }
+                &::placeholder{
+                    color: #b8b8b8;
+                }
             }
             i, span {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            i {
+                font-size: 1.6rem;
+                left: 1.8rem;
 
+                pointer-events: none;
+                transition: 0.2s all ease;
+            }
+            span {
+                right: 1.5rem;
+                font-size: 1.8rem;
+                cursor: pointer;
+                display: none;
+            }
+        }
+        .info-text {
+            font-size: 1.3rem;
+
+            color: #9a9a9a;
+
+            margin: -3px 0 -10px;
+            span {
+                font-family: 'medium';
+            }
+        }
+        ul {
+            height: 0;
+
+            opacity: 0;
+            transition: all 0.2s ease;
+            overflow: hidden;
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-top: 1.7rem;
+                margin-bottom: 1.4rem;
+                // padding-bottom: 1.7rem;
+
+                border-top: 1px solid #ccc;
+                &:first-child {
+                    padding-top: 0px;
+                    border-top: 0px;
+                }
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+            .word {
+                p {
+                    font-family: 'medium';
+                    font-size: 2.2rem;
+
+                    margin-bottom: 0.5rem;
+                }
+                span {
+                    font-size: 1.2rem;
+
+                    color: #989898;
+                }
+                i {
+                    font-size: 1.5rem;
+
+                    color: #999;
+                    cursor: pointer;
+
+                }
+            }
+            .content {
+                max-height: 200px;
+                overflow-y: auto;
+                &::-webkit-scrollbar {
+                    width: 0px;
+                }
+                li:first-child{
+                    padding-top: 1.7rem;
+                    border-top: 1px solid #ccc;
+                }
+                .details {
+                    padding-left: 1rem;
+                    border-radius: 4px 0 0 4px;
+                    border-left: 3px solid $secondary-cl;
+                    p {
+                        font-family: 'medium';
+                        font-size: 1.7rem;
+                        line-height: normal;
+                    }
+                    span {
+                        font-size: 1.5rem;
+                        line-height: normal;
+
+                        color: #7e7e7e;
+                    }
+                }
+                .example {
+                    span {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                }
+                .synonyms {
+                    &-list {
+                        display: flex;
+                        flex-wrap: wrap;
+                        span {
+                            cursor: pointer;
+                            margin-right: 0.5rem;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        &.active {
+            .info-text{
+                display: none;
+            }
+            ul {
+                height: 100%;
+                opacity: 1;
             }
         }
     }
