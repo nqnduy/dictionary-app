@@ -95,6 +95,8 @@ function data(result, word) {
 
         //TODO: Check EXAMPLE data
         let checkExistence = false;
+        document.querySelector(".example span").innerHTML = "";
+
         for (let meaning of result[0].meanings) {
             for (let definition of meaning.definitions) {
                 if (definition.example) {
